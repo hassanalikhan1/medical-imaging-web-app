@@ -2,6 +2,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+/**
+ * ${1:Description placeholder}
+ * @date 4/9/2024 - 6:44:59 AM
+ *
+ * @returns {*}
+ */
 const UploadDICOM = () => {
     const [file, setFile] = useState(null);
 
@@ -14,7 +20,7 @@ const UploadDICOM = () => {
         formData.append('file', file);
 
         try {
-            const response = await axios.post('http://localhost:8000/api/upload-dicom/', formData, {
+            const response = await axios.post('http://127.0.0.1:5000/api/upload-dicom/', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
